@@ -18,12 +18,16 @@ function App() {
     setExpenses((prevExpenses) => [...prevExpenses, newExpense])
   }
 
+  function deleteExpense(id) {
+    setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense.id !== id))
+  }
+
   return (
     <div className="app">
       <Header />
       <Total total={total} />
       <ExpenseForm onAddExpense={addExpense} />
-      <ExpenseList expenses={expenses} />
+      <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense} />
     </div>
   )
 }

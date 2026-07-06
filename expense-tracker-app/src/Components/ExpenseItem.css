@@ -22,8 +22,32 @@
   color: #888;
 }
 
+.expense-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .expense-amount {
   font-weight: bold;
   font-size: 1.1rem;
+  color: #d9534f;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  background-color: #fdecea;
+  border-color: #d9534f;
   color: #d9534f;
 }
